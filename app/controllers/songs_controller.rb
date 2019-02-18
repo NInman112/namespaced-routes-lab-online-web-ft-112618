@@ -25,6 +25,9 @@ class SongsController < ApplicationController
   end
 
   def new
+    def self.allow_artists
+      first.allow_create_artists
+    end
     @song = Song.new
   end
 
@@ -67,4 +70,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
