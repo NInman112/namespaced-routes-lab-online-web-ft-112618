@@ -25,10 +25,10 @@ class SongsController < ApplicationController
   end
 
   def new
-    if Preference.allow_artists == true
+    if Preference.allow_songs == true
       @song = Song.new
     else
-      redirect_to artists_path
+      redirect_to songs_path
     end
     
   end
