@@ -4,4 +4,8 @@ class Preference < ActiveRecord::Base
     first.allow_create_artists
   end
 
+  def self.allow_songs
+    first.allow_create_songs
+  end
+
 end
